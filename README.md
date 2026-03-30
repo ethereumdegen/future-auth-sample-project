@@ -23,7 +23,7 @@ A starter template for Rust/Axum apps with [FutureAuth](https://future-auth.com)
 
 ### 2. Set up your database
 
-You need a PostgreSQL database. Create one locally or use a hosted service.
+You need a PostgreSQL database. A local install works fine, or use a cloud-hosted database like [Neon](https://neon.tech), [Supabase](https://supabase.com), or any other PostgreSQL provider.
 
 ```bash
 createdb myapp
