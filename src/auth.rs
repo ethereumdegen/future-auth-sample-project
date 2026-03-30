@@ -13,7 +13,6 @@ use crate::AppState;
 pub struct User {
     pub id: String,
     pub email: Option<String>,
-    pub phone: Option<String>,
     pub name: Option<String>,
     pub email_verified: bool,
     pub image: Option<String>,

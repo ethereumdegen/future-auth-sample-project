@@ -8,7 +8,7 @@ use axum::{
 use sqlx::postgres::PgPoolOptions;
 use tower_http::cors::{CorsLayer, AllowOrigin};
 use tower_http::trace::TraceLayer;
-use tower_http::services::ServeDir;
+use tower_http::services::{ServeDir, ServeFile};
 use http::Method;
 use http::header::{AUTHORIZATION, CONTENT_TYPE, COOKIE};
 
@@ -79,7 +79,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         // Protected API routes
         .route("/api/me", get(me))
         // Serve frontend (production)
-        .fallback_service(ServeDir::new("frontend/dist").append_index_html_on_directories(true))
+        .fallback_service(ServeDir::new("frontend/dist").append_index_html_on_directories(true).fallback(ServeFile::new("frontend/dist/index.html")))
         .layer(cors)
         .layer(TraceLayer::new_for_http())
         .with_state(state);
