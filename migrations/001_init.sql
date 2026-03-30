@@ -1,0 +1,12 @@
+-- Add your app-specific tables here.
+-- FutureAuth tables (user, session, verification) are created automatically by the SDK.
+--
+-- Example:
+--
+-- CREATE TABLE IF NOT EXISTS todo (
+--     id TEXT PRIMARY KEY,
+--     user_id TEXT NOT NULL REFERENCES "user"(id) ON DELETE CASCADE,
+--     title TEXT NOT NULL,
+--     completed BOOLEAN NOT NULL DEFAULT FALSE,
+--     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+-- );
