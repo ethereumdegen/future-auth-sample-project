@@ -16,7 +16,7 @@ export default function SignIn() {
     setLoading(true)
     setError('')
     try {
-      await authClient.emailOtp.sendVerificationOtp({ email, type: "sign-in" })
+      await authClient.emailOtp.sendVerificationOtp({ email })
       setStep('otp')
     } catch {
       setError('Failed to send code. Please try again.')

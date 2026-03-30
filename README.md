@@ -99,7 +99,7 @@ frontend/
   src/
     App.tsx          # Router + auth guard
     lib/
-      auth-client.ts # FutureAuth client (better-auth)
+      auth-client.ts # FutureAuth auth client (direct fetch)
     pages/
       SignIn.tsx     # Email OTP sign-in
       Dashboard.tsx  # Protected dashboard page
